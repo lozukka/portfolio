@@ -1,0 +1,135 @@
+/*------fonts--------*/
+/* playfair-display-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/playfair-display-v37-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* playfair-display-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/playfair-display-v37-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* playfair-display-900 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 900;
+  src: url('../fonts/playfair-display-v37-latin-900.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* work-sans-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/work-sans-v19-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+:root{
+    --main-color: #A56C5B;
+    --secondary-color: #8E9D92;
+    --text-color: #2E2E2E;
+    --white-color: #EDE6DB;
+    --heading: 'Playfair Display', Georgia, 'Times New Roman', Times, serif;
+    --text: 'Work Sans', Arial, Helvetica, sans-serif;
+}
+body{
+    margin:0;
+    background-color: var(--white-color);
+}
+/*-------texts------*/
+h1 {
+    font-family: var(--heading);
+    font-weight: 900;
+    color:var(--text-color);
+    font-size: 6em;
+}
+h2, h3 {
+    font-family: var(--heading);
+    font-weight: 700;
+    color:var(--text-color);
+    font-size: 2.25em;
+}
+p, a {
+    font-family: var(--text);
+    color:var(--text-color);
+}
+/*-------nav------*/
+nav {
+    margin-right:20px;
+    position: sticky;
+    top:20px;
+}
+nav ul {
+    display: flex; 
+    list-style: none;
+    justify-content: flex-end;
+}
+nav ul li a{
+    color: var(--main-color);
+    font-family: var(--heading);
+    font-weight: 700;
+    text-decoration: none;
+    padding:20px 40px;
+    font-size: 2em;
+    border:1px solid black;
+}
+
+/*-------gallery------*/
+img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 5px solid var(--secondary-color);
+}
+
+/*------main--------*/
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    width: 50%;
+    margin: auto;
+}
+main h1, main h2 {
+    align-self: flex-start;
+    margin: 20px 0;
+}
+/*------project-about--------*/
+#project-about {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+}
+#project-about section {
+    width: 100px;
+    padding: 20px;
+}
+
+#contact img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 10px solid var(--secondary-color);
+    background: var(--secondary-color);
+}
+
+#contact a {
+    border-radius: 100%;
+    padding:50px;
+}

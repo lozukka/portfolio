@@ -34,6 +34,8 @@
 
 *, *::after, *::before{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 :root{
     --main-color: #A56C5B;
@@ -60,10 +62,16 @@ h2, h3 {
     color:var(--text-color);
     font-size: 2.25em;
 }
-p, a {
+p, a, li {
     font-family: var(--text);
     color:var(--text-color);
+    font-size: 1.6em;
 }
+/*-------main------*/
+main {
+    width: 100%;
+}
+
 /*-------nav------*/
 nav {
     margin-right:20px;
@@ -87,13 +95,24 @@ nav ul li a{
 header {
     display: flex;
     justify-content: center;
+    max-height: 80vw;
 }
-header h1 {
+header section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     align-self: center;
-    margin-right: 350px;
+    margin-right: 25vw;
 }
+
+header p{
+    margin:0;
+    font-size: 1.75em;
+}
+
 header #profile-pic{
     width: 238px;
+    height: auto;
     transform: rotate(24deg);
     margin-top: -180px;
     margin-left: 80px;
@@ -106,38 +125,50 @@ header #profile-pic{
     background-size: cover;
 }
 #projects h2 {
-    margin: 100px 185px;
-    padding-top: 185px;
+    padding: 185px;
+    padding-bottom: 0;
     font-size: 6em;
 }
 #project-cards{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 16px;
-    grid-row-gap: 15px;
-    margin:100px 185px;
+    justify-items: center;
+    gap: 90px;
     margin-bottom:0;
+    padding: 185px;
+    width: 100%;
 }
 .project-card{
     margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    gap:30px;
 }
 .project-card img {
-    width: 680px;
+    width: 100%;
 }
+
 /*-------about------*/
 #about {
     display: flex;
     background-image: url(./pictures/paperlike1.png);
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 100px;
+    padding: 185px;
+    gap: 150px;
 }
 #about img{
     max-width: 500px;
     border-radius: 200px 0;
     border: 25px solid var(--secondary-color);
 }
+#about article {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
 /*-------connect------*/
 #contact{
     background-image: url(./pictures/paperlike2.png);

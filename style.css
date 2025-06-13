@@ -80,9 +80,8 @@ nav ul li a{
     font-family: var(--heading);
     font-weight: 700;
     text-decoration: none;
-    padding:20px 40px;
+    padding:15px 20px;
     font-size: 2em;
-    border:1px solid black;
 }
 /*-------landing page / header------*/
 header {

@@ -52,13 +52,13 @@ h1 {
     font-family: var(--heading);
     font-weight: 900;
     color:var(--text-color);
-    font-size: 6em;
+    font-size: 4em;
 }
 h2, h3 {
     font-family: var(--heading);
     font-weight: 700;
     color:var(--text-color);
-    font-size: 2.25em;
+    font-size: 2em;
 }
 p, a {
     font-family: var(--text);
@@ -80,9 +80,8 @@ nav ul li a{
     font-family: var(--heading);
     font-weight: 700;
     text-decoration: none;
-    padding:20px 40px;
+    padding:15px 20px;
     font-size: 2em;
-    border:1px solid black;
 }
 
 /*-------gallery------*/
@@ -91,7 +90,6 @@ img {
     height: auto;
     object-fit: cover;
     border-radius: 10px;
-    border: 5px solid var(--secondary-color);
 }
 
 /*------main--------*/
@@ -100,7 +98,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: 50px 20px 100px 20px;
     width: 50%;
     margin: auto;
 }
@@ -109,27 +107,43 @@ main h1, main h2 {
     margin: 20px 0;
 }
 /*------project-about--------*/
-#project-about {
+
+article{
     display: flex;
-    flex-direction: column-reverse;
-    align-items: flex-start;
-    justify-content: center;
-    width: 100%;
+    flex-wrap: wrap;
+    gap: 50px;
 }
-#project-about section {
-    width: 100px;
-    padding: 20px;
+.project-about, .project-why {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    gap: 50px;
 }
 
 #contact img{
-    width: 200px;
-    height: 200px;
+    width: 75px;
+    height: 75px;
     border-radius: 50%;
-    border: 10px solid var(--secondary-color);
+    border: 6px solid var(--secondary-color);
     background: var(--secondary-color);
 }
 
 #contact a {
     border-radius: 100%;
     padding:50px;
+}
+
+/*-------footer------*/
+footer {
+    background: var(--secondary-color);
+    padding: 100px;
+}
+footer h3 {
+    margin-bottom:50px;
+    color:var(--white-color)
+}
+footer a {
+    color: var(--white-color);
+    font-size: 1.4em;
 }
